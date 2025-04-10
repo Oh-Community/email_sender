@@ -389,19 +389,9 @@
                     formData.append('attachments[]', attachments[i]);
                 }
                 
-                // 模擬發送郵件（實際應用中，這裡需要連接到後端API）
-                sendButton.disabled = true;
-                sendButton.textContent = '發送中...';
-                
-                // 這裡模擬AJAX請求到後端
-                setTimeout(function() {
-                    showStatus('郵件發送成功！如果未收到郵件，請檢查垃圾郵件箱或SMTP設置。', 'success');
-                    sendButton.disabled = false;
-                    sendButton.textContent = '發送郵件';
-                }, 2000);
                 
                 // 實際應用中，應該使用以下代碼
-                /*
+                
                 fetch('/send-email', {
                     method: 'POST',
                     body: formData
@@ -421,7 +411,7 @@
                     sendButton.disabled = false;
                     sendButton.textContent = '發送郵件';
                 });
-                */
+                
             });
             
             function showStatus(message, type) {
